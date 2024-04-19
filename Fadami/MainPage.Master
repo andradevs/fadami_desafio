@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainPage.master.cs" Inherits="Fadami.MainPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Content/Main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header> <h1> 
+            Painel de Veiculos</h1>
+        <nav>
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/index.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/usuarios.aspx" Text="Usuario" Value="Usuario"></asp:MenuItem>
+                    <asp:MenuItem Text="Veiculo" Value="Veiculo" NavigateUrl="~/Veiculos.aspx"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Sair.aspx" Text="Sair" Value="Sair"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </nav>
+        </header>
+
+        <main>
+                    <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        </main>
+        <footer>
+            Desenvolvido por <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="https://github.com/andradevs" Target="_blank">Guilherme Andrade</asp:HyperLink>
+            .
+        </footer>
+    </form>
+</body>
+</html>
